@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Base dark theme */
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #22211e;
+  color: #ffffff;
+}
+
+/* Base button style */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded px-6 py-3 font-semibold text-black bg-[#c3ced3] transition-transform duration-200;
+}
+.btn-primary:hover { transform: translateY(-1px) scale(1.02); }
+.btn-primary:active { transform: translateY(0) scale(0.99); }
+
+/* Smooth transitions for route changes */
+.page-enter {
+  opacity: 0.01;
+  transform: translateY(8px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease;
+}
+
+.bg-butn {
+  background-color: #bb9135;
+}
+
+/* .bg-butn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  background-color: #bb9135;
+  padding-inline: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 3);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+} */
