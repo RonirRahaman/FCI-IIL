@@ -25,7 +25,7 @@ function BookingForm() {
   const field = (id: string, label: string, input: React.ReactNode) => (
     <div className="relative">
       {input}
-      <label htmlFor={id} className="pointer-events-none absolute left-3 top-2 text-white/60 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-white/50 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#c3ced3]">
+      <label htmlFor={id} className="pointer-events-none absolute left-3 top-2 text-black/60 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-black/50 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#c3ced3]">
         {label}
       </label>
     </div>
@@ -40,20 +40,20 @@ function BookingForm() {
         {field(
           'name',
           'Full Name*',
-          <input id="name" required name="name" value={form.name} onChange={onChange} placeholder=" " className="peer rounded bg-white/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
+          <input id="name" required name="name" value={form.name} onChange={onChange} placeholder=" " className="peer rounded bg-black/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
         )}
         {field(
           'email',
           'Email Address*',
-          <input id="email" required type="email" name="email" value={form.email} onChange={onChange} placeholder=" " className="peer rounded bg-white/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
+          <input id="email" required type="email" name="email" value={form.email} onChange={onChange} placeholder=" " className="peer rounded bg-black/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
         )}
         {field(
           'phone',
           'Phone Number*',
-          <input id="phone" required name="phone" value={form.phone} onChange={onChange} placeholder=" " className="peer rounded bg-white/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
+          <input id="phone" required name="phone" value={form.phone} onChange={onChange} placeholder=" " className="peer rounded bg-black/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
         )}
         <div className="relative">
-          <select id="service" required name="service" value={form.service} onChange={onChange} className="peer text-black rounded bg-white/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]">
+          <select id="service" required name="service" value={form.service} onChange={onChange} className="peer text-black rounded bg-black/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]">
             <option value="" disabled hidden></option>
             <option>Funding</option>
             <option>Investor Loans</option>
@@ -65,25 +65,25 @@ function BookingForm() {
           </select>
           <label
             htmlFor="service"
-            className={`pointer-events-none absolute left-3 ${form.service ? '-top-3 text-xs text-[#c3ced3]' : 'top-2'} text-white/60 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#c3ced3]`}
+            className={`pointer-events-none absolute left-3 ${form.service ? '-top-3 text-xs text-black' : 'top-2'} text-black/60 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#c3ced3]`}
           >
             Service of Interest*
           </label>
         </div>
         {field(
           'datetime',
-          'Preferred Date & Time*',
-          <input id="datetime" required type="datetime-local" name="datetime" value={form.datetime} onChange={onChange} placeholder=" " className="peer text-black rounded bg-white/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
+          '',
+          <input id="datetime" required type="datetime-local" name="datetime" value={form.datetime} onChange={onChange} placeholder=" " className="peer text-black/60 rounded bg-black/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
         )}
       </div>
       {field(
         'message',
         'Project Details / Message',
-        <textarea id="message" name="message" value={form.message} onChange={onChange} placeholder=" " rows={4} className="peer rounded bg-white/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
+        <textarea id="message" name="message" value={form.message} onChange={onChange} placeholder=" " rows={4} className="peer rounded bg-black/10 px-3 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#c3ced3]" />
       )}
       <button type="submit" className="relative btn-primary overflow-hidden bg-butn">
-        <span className="relative z-10">Book My Consultation</span>
-        <span className="absolute inset-0 translate-x-[-120%] bg-white/30 skew-x-12" style={{ transition: 'transform 600ms' }} />
+        <span className="relative z-10">Book Free Consultation</span>
+        <span className="absolute inset-0 translate-x-[-120%] bg-black/30 skew-x-12" style={{ transition: 'transform 600ms' }} />
       </button>
       <style>{`.btn-primary:hover span:nth-child(2){ transform: translateX(120%); }`}</style>
     </form>

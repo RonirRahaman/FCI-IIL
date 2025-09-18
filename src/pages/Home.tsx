@@ -5,6 +5,7 @@ import CommitmentSection from '../components/CommitmentSection'
 import TrustedSection from '../components/TrustedSection'
 // import TeamPreview from '../components/TeamPreview'
 import Features from '../components/Features'
+import FeaturesCopy from '../components/FeaturesCopy'
 // import Testimonials from '../components/Testimonials'
 // import Pricing from '../components/Pricing'
 import FAQs from '../components/FAQs'
@@ -17,12 +18,13 @@ import CTA from '../components/CTA'
 function Home() {
   return (
     <div>
-      <div className="pt-20">
+      <div className="pt-20 bg-[#22211e]">
         <Hero />
       </div>
-      <Features />
       {/* <Stats /> */}
+      <Features />
       <AboutPreview />
+      <FeaturesCopy />
       <ServicesPreview />
       <CommitmentSection />
       <TrustedSection />

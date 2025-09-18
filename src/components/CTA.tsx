@@ -9,10 +9,10 @@ function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="rounded-2xl bg-gradient-to-r from-[#c3ced3]/20 to-white/10 border border-white/10 p-10"
+        className="rounded-2xl bg-gradient-to-r from-[#c3ced3]/20 to-white/10 border border-black/10 p-10"
       >
         <h2 className="text-3xl md:text-4xl font-extrabold">Let's build success together</h2>
-        <p className="mt-3 text-white/80">Book a consultation and get tailored funding and consulting support.</p>
+        <p className="mt-3 text-black/80">Book a free consultation and get a tailored, specialized support.</p>
         <div className="mt-6">
           <Link to="/contact" className="btn-primary bg-butn">Contact Us</Link>
         </div>

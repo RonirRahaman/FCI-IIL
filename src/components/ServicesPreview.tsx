@@ -10,19 +10,19 @@ import governmentContractingVideo from '../image/Global Trade & Strategic Consul
 const services = [
   {
     title: 'Real Estate & Development Services',
-    desc: 'FCI LLC specializes in land acquisition services that help investors and developers secure high-value property for residential, commercial, and industrial projects. We conduct due diligence, market research, and negotiations to ensure properties align with zoning and investment goals.',
+    desc: 'FCI specializes in land acquisition services that help investors, providers, and developers secure high-value property for residential, commercial, and industrial projects. We conduct due diligence, market research, and negotiations to ensure properties align with zoning and investment goals.',
     video: landAcquisitionVideo,
     link: '/real-estate-services',
   },
   {
     title: 'Financial & Capital Advisory Services',
-    desc: 'FCI LLC connects clients with private capital funding solutions for real estate, infrastructure, and large-scale projects. We source investors and structure deals to maximize returns while minimizing risks. Our financial expertise ensures access to the right funding at the right time.',
+    desc: 'FCI connects clients with private capital funding solutions for real estate, infrastructure, and large-scale projects. We source investors and structure deals to maximize returns while minimizing risks. Our financial expertise ensures access to the right funding at the right time.',
     video: privateCapitalVideo,
     link: '/financial-advisory',
   },
   {
     title: 'Global Trade & Strategic Consulting',
-    desc: 'FCI LLC provides government contracting consulting services that help businesses win and manage public-sector contracts. We guide clients through bidding, compliance, and project execution. Our expertise ensures businesses remain competitive in federal, state, and local government opportunities.',
+    desc: 'FCI provides government contracting consulting services that help businesses win and manage public-sector contracts. We guide clients through bidding, compliance, and project execution. Our expertise ensures businesses remain competitive in federal, state, and local government opportunities.',
     video: governmentContractingVideo,
     link: '/global-trade',
   },
@@ -88,7 +88,7 @@ function ServicesPreview() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <h2 className="text-3xl md:text-4xl font-bold">Services</h2>
-        <Link to="/services" className="hidden sm:inline-block rounded bg-[#bb9135] text-black px-5 py-2.5 font-semibold hover:bg-[#a67d2a] transition-colors">View All</Link>
+        {/* <Link to="/services" className="hidden sm:inline-block rounded bg-[#bb9135] text-black px-5 py-2.5 font-semibold hover:bg-[#a67d2a] transition-colors">View All</Link> */}
       </motion.div>
 
       {/* Desktop Carousel - 2 cards at a time */}
@@ -110,7 +110,7 @@ function ServicesPreview() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: (index % services.length) * 0.1 }}
-                    className="group rounded-lg overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 shadow-md hover:shadow-[0_8px_30px_rgba(195,206,211,0.15)]"
+                    className="group rounded-lg overflow-hidden bg-black/5 border border-black/10 hover:border-black/20 transition-all duration-300 shadow-md hover:shadow-[0_8px_30px_rgba(195,206,211,0.15)]"
                   >
                     <div className="relative h-64 overflow-hidden">
                       <video 
@@ -126,7 +126,7 @@ function ServicesPreview() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                      <p className="text-white/75 mb-4 text-sm leading-relaxed">{service.desc}</p>
+                      <p className="text-black/75 mb-4 text-sm leading-relaxed">{service.desc}</p>
                       <Link 
                         to={service.link}
                         className="inline-block bg-[#c3ced3] text-black px-4 py-2 rounded font-semibold hover:bg-[#a8b5bb] transition-colors"
@@ -143,7 +143,7 @@ function ServicesPreview() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-3 transition-all duration-200"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/10 hover:bg-black/20 backdrop-blur-sm rounded-full p-3 transition-all duration-200"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -151,7 +151,7 @@ function ServicesPreview() {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-3 transition-all duration-200"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/10 hover:bg-black/20 backdrop-blur-sm rounded-full p-3 transition-all duration-200"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -166,7 +166,7 @@ function ServicesPreview() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                index === currentIndex ? 'bg-[#c3ced3]' : 'bg-white/30 hover:bg-white/50'
+                index === currentIndex ? 'bg-[#c3ced3]' : 'bg-black/30 hover:bg-black/50'
               }`}
             />
           ))}
@@ -192,7 +192,7 @@ function ServicesPreview() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: (index % services.length) * 0.1 }}
-                    className="group rounded-lg overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 shadow-md"
+                    className="group rounded-lg overflow-hidden bg-black/5 border border-black/10 hover:border-black/20 transition-all duration-300 shadow-md"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <video 
@@ -208,7 +208,7 @@ function ServicesPreview() {
                     </div>
                     <div className="p-4">
                       <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                      <p className="text-white/75 mb-3 text-sm leading-relaxed">{service.desc}</p>
+                      <p className="text-black/75 mb-3 text-sm leading-relaxed">{service.desc}</p>
                       <Link 
                         to={service.link}
                         className="inline-block bg-[#c3ced3] text-black px-4 py-2 rounded font-semibold hover:bg-[#a8b5bb] transition-colors"
@@ -256,7 +256,7 @@ function ServicesPreview() {
       </div>
 
       <div className="mt-8 sm:hidden">
-        <Link to="/services" className="inline-block rounded bg-[#bb9135] text-black px-5 py-2.5 font-semibold w-full text-center hover:bg-[#a67d2a] transition-colors">View All Services</Link>
+        {/* <Link to="/services" className="inline-block rounded bg-[#bb9135] text-black px-5 py-2.5 font-semibold w-full text-center hover:bg-[#a67d2a] transition-colors">View All Services</Link> */}
       </div>
     </section>
   )

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import Logo from '../image/bg-logo.jpeg'
+import Logo from '../image/bg-logo.png'
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -15,8 +15,8 @@ function Navbar() {
   }, [])
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-[#22211e]/90 backdrop-blur' : 'bg-transparent'}`}>
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-[#22211e]/90 backdrop-blur' : 'bg-[#22211e]'}`}>
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
         <Link to="/" className="flex items-center gap-3">
           <img src={Logo} alt="FCI LLC" className="h-18 w-auto" />
           {/* <span className="font-semibold tracking-wide">FCI LLC</span> */}
@@ -115,7 +115,7 @@ function Navbar() {
                 <NavLink
                   to={item.to}
                   onClick={() => setIsOpen(false)}
-                  className={({ isActive }) => `block px-3 py-3 rounded hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : ''}`}
+                  className={({ isActive }) => `block px-3 py-3 rounded hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : 'text-white'}`}
                 >
                   {item.label}
                 </NavLink>
@@ -128,7 +128,7 @@ function Navbar() {
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 className="flex items-center justify-between w-full px-3 py-3 text-left hover:bg-white/10 transition-colors rounded"
               >
-                <span className="text-sm font-semibold text-[#c3ced3]">Services</span>
+                <span className="text-sm font-semibold text-white">Services</span>
                 <svg 
                   className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} 
                   fill="none" 
@@ -146,7 +146,7 @@ function Navbar() {
                       setIsOpen(false)
                       setIsMobileServicesOpen(false)
                     }}
-                    className={({ isActive }) => `block px-3 py-2 rounded text-sm hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : ''}`}
+                    className={({ isActive }) => `block px-3 py-2 rounded text-sm hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : 'text-white'}`}
                   >
                     Real Estate & Development
                   </NavLink>
@@ -156,7 +156,7 @@ function Navbar() {
                       setIsOpen(false)
                       setIsMobileServicesOpen(false)
                     }}
-                    className={({ isActive }) => `block px-3 py-2 rounded text-sm hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : ''}`}
+                    className={({ isActive }) => `block px-3 py-2 rounded text-sm hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : 'text-white'}`}
                   >
                     Financial & Capital Advisory
                   </NavLink>
@@ -166,7 +166,7 @@ function Navbar() {
                       setIsOpen(false)
                       setIsMobileServicesOpen(false)
                     }}
-                    className={({ isActive }) => `block px-3 py-2 rounded text-sm hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : ''}`}
+                    className={({ isActive }) => `block px-3 py-2 rounded text-sm hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : 'text-white'}`}
                   >
                     Global Trade & Strategic Consulting
                   </NavLink>
@@ -178,7 +178,7 @@ function Navbar() {
               <NavLink
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className={({ isActive }) => `block px-3 py-3 rounded hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : ''}`}
+                className={({ isActive }) => `block px-3 py-3 rounded hover:bg-white/10 transition-colors ${isActive ? 'text-[#c3ced3]' : 'text-white'}`}
               >
                 Contact
               </NavLink>

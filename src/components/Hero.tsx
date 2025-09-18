@@ -7,12 +7,22 @@ function Hero() {
       <video className="absolute inset-0 h-full w-full object-cover" autoPlay loop muted playsInline>
         <source src={heroVideo} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#22211e]/80" />
+      <div className="absolute inset-0 bg-gradient-to-b via-black/40" />
       <div className="relative z-10 h-full mx-auto max-w-6xl px-4 flex flex-col items-center justify-center text-center">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight opacity-0 animate-[fadeInUp_700ms_ease_100ms_forwards]">Empowering Developers, Contractors, and Investors</h1>
-        <p className="mt-4 max-w-2xl text-white/85 text-base sm:text-lg opacity-0 animate-[fadeInUp_700ms_ease_300ms_forwards]">
+        <h1
+          className="text-white text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight opacity-0 animate-[fadeInUp_700ms_ease_100ms_forwards]"
+          style={{ textShadow: "4px 4px 12px rgba(0,0,0,0.7)" }}
+        >
+          Empowering Developers, Contractors, Providers, and Investors
+        </h1>
+
+        <p
+          className="mt-4 max-w-2xl text-white/85 text-base sm:text-lg opacity-0 animate-[fadeInUp_700ms_ease_300ms_forwards]"
+          style={{ textShadow: "3px 3px 10px rgba(0,0,0,0.65)" }}
+        >
           Smart funding & consulting solutions to accelerate timelines and maximize returns.
         </p>
+
         <div className="mt-8 opacity-0 animate-[fadeInUp_700ms_ease_500ms_forwards]">
           {/* <Link to="/services" className="relative btn-primary bg-butn overflow-hidden">
             <span className="relative z-10">Explore Services</span>

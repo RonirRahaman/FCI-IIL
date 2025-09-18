@@ -13,10 +13,10 @@ function CommitmentSection() {
           className="order-2 lg:order-1"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center lg:text-left"> Our Commitment to Your Success</h2>
-          <div className="space-y-4 text-white/80 leading-relaxed">
-            <h3 className="text-xl font-semibold text-[#c3ced3] mb-3">Building Lasting Partnerships</h3>
+          <div className="space-y-4 text-black/80 leading-relaxed">
+            <h3 className="text-xl font-semibold text-[#bb9135] mb-3">Building Lasting Partnerships</h3>
             <p>
-              At FCI LLC, we don't just fund projects — we build lasting partnerships. Our team brings decades of combined experience in real estate, construction, finance, and government contracting, giving you the confidence that every solution is backed by expertise and industry insight. From the first consultation to the final closing, we stand by your side with hands-on guidance, transparent communication, and a results-driven approach.
+              At FCI, we don't just fund projects — we build lasting partnerships. Our team brings decades of combined experience in real estate, construction, finance, and government contracting, giving you the confidence that every solution is backed by expertise and industry insight. From the first consultation to the final closing, we stand by your side with hands-on guidance, transparent communication, and a results-driven approach.
             </p>
             <p>
               Whether you're tackling your first investment or managing multi-million-dollar developments, we are committed to helping you achieve your vision with integrity, speed, and precision.

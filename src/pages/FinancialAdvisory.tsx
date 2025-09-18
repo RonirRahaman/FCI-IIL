@@ -27,8 +27,8 @@ function ServiceSection({
     <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}>
       <Reveal delay={delay}>
         <div className="space-y-4">
-          <h3 className="text-2xl lg:text-3xl font-bold text-white">{title}</h3>
-          <p className="text-white/80 leading-relaxed">{description}</p>
+          <h3 className="text-2xl lg:text-3xl font-bold text-black">{title}</h3>
+          <p className="text-black/80 leading-relaxed">{description}</p>
         </div>
       </Reveal>
       <Reveal delay={delay + 100}>
@@ -55,7 +55,7 @@ function FinancialAdvisory() {
   const services = [
     {
       title: "Private Capital",
-      description: "FCI LLC connects clients with private capital funding solutions for real estate, infrastructure, and large-scale projects. We source investors and structure deals to maximize returns while minimizing risks. Our financial expertise ensures access to the right funding at the right time. With us, clients gain a competitive edge in securing capital.",
+      description: "FCI connects clients with private capital funding solutions for real estate, infrastructure, and large-scale projects. We source investors and structure deals to maximize returns while minimizing risks. Our financial expertise ensures access to the right funding at the right time. With us, clients gain a competitive edge in securing capital.",
       video: privateCapitalVideo
     },
     {
@@ -95,8 +95,8 @@ function FinancialAdvisory() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 space-y-20">
         <header className="text-center">
           <Reveal delay={0}>
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-white mb-6">Financial & Capital Advisory Services</h1>
-            <p className="text-white/80 max-w-4xl mx-auto text-lg leading-relaxed">
+            <h1 className="text-4xl lg:text-5xl font-extrabold text-black mb-6">Financial & Capital Advisory Services</h1>
+            <p className="text-black/80 max-w-4xl mx-auto text-lg leading-relaxed">
               Access private capital, specialized funding solutions, and expert financial advisory services 
               designed to maximize returns while minimizing risks for your investments and projects.
             </p>
@@ -116,11 +116,11 @@ function FinancialAdvisory() {
           ))}
         </div>
 
-        <section id="booking" className="rounded-xl bg-white/5 border border-white/10 p-8 lg:p-12">
+        <section id="booking" className="rounded-xl bg-black/5 border border-black/10 p-8 lg:p-12">
           <Reveal delay={0}>
             <div className="text-center mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Secure Your Funding?</h2>
-              <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">Ready to Secure Your Funding?</h2>
+              <p className="text-black/80 text-lg max-w-2xl mx-auto">
                 Let's discuss how our financial and capital advisory services can help you access the right funding 
                 and maximize your investment returns. We'll reach out within 24 hours to schedule your consultation.
               </p>

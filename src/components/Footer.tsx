@@ -1,12 +1,12 @@
 import Reveal from './Reveal'
-import Logo from '../image/bg-logo.jpeg'
-import { FaTwitter, FaLinkedinIn, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa'
+import Logo from '../image/bg-logo.png'
+import { FaTwitter, FaLinkedinIn, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa'
 
 function Footer() {
   return (
     <footer className="bg-[#22211e] border-t border-white/10">
       <Reveal>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-4">
+        <div className="text-white mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-4">
           <div className="space-y-3">
             <img src={Logo} alt="FCI LLC" className="h-20 w-auto" />
             {/* <h3 className="text-lg font-semibold">FCI LLC</h3> */}
@@ -15,9 +15,10 @@ function Footer() {
           <div>
             <h4 className="font-semibold">Contact</h4>
             <ul className="mt-2 space-y-2 text-white/80">
-              <li className="flex items-center gap-2"><FaEnvelope className="text-[#c3ced3]" /> info@fci-llc.com</li>
-              <li className="flex items-center gap-2"><FaPhoneAlt className="text-[#c3ced3]" /> (555) 123-4567</li>
-              <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#c3ced3]" /> 123 Market St, Suite 200</li>
+              <li className="flex items-center gap-2"><FaEnvelope className="text-[#c3ced3]" /> info@fcillc.com</li>
+              {/* <li className="flex items-center gap-2"><FaPhoneAlt className="text-[#c3ced3]" /> (555) 123-4567</li> */}
+              <li className="flex items-center gap-2"><FaMapMarkerAlt className="text-[#c3ced3]" /> 200 Massachusetts Avenue, NW
+                Washington DC 20001</li>
             </ul>
           </div>
           <div>

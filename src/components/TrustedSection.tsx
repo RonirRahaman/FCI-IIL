@@ -13,10 +13,10 @@ function TrustedSection() {
           className="order-2 lg:order-2"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center lg:text-left"> Trusted. Reliable. Proven.</h2>
-          <div className="space-y-4 text-white/80 leading-relaxed">
-            <h3 className="text-xl font-semibold text-[#c3ced3] mb-3">Your Trusted Financial Partner</h3>
+          <div className="space-y-4 text-black/80 leading-relaxed">
+            <h3 className="text-xl font-semibold text-[#bb9135] mb-3">Your Trusted Financial Partner</h3>
             <p>
-              When it comes to real estate funding and consulting, trust is everything. FCI LLC has built a reputation for reliability, transparency, and delivering results that matter. Our proven track record includes successful partnerships with developers, contractors, and investors across diverse markets.
+              When it comes to funding and consulting, trust is everything. FCI has built a reputation for reliability, transparency, and delivering results that matter. Our proven track record includes successful partnerships with developers, contractors, and investors across diverse markets.
             </p>
             <p>
               We combine financial expertise with real-world industry knowledge, ensuring that every project we touch is supported by strong due diligence and risk management practices. With us, you gain more than funding — you gain a trusted ally dedicated to helping you achieve long-term success.

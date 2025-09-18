@@ -79,7 +79,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-[#22211e] text-white">
+      <div className="min-h-screen flex flex-col bg-[#ffffff] text-[#22211e]">
         <Navbar />
         <main className="flex-1">
           <AnimatedRoutes />

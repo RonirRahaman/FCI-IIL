@@ -12,8 +12,8 @@ function AboutPreview() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <h2 className="text-3xl md:text-4xl font-bold">Who We Are</h2>
-        <p className="mt-4 text-white/80">
-          FCI LLC provides specialized funding and consulting solutions for developers, contractors, and investors. We deliver high-impact services that accelerate timelines and increase profitability.
+        <p className="mt-4 text-black/80">
+          FCI provides specialized funding and consulting solutions for developers, providers, contractors, and investors. We deliver high-impact services that accelerate timelines and increase profitability.
         </p>
         <Link to="/about" className="mt-6 inline-block btn-primary bg-butn">More About Us</Link>
       </motion.div>

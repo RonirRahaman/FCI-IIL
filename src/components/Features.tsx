@@ -1,10 +1,27 @@
 import { motion } from 'framer-motion'
+import { FaBuilding, FaHospital, FaHandsHelping, FaDraftingCompass } from 'react-icons/fa'
 
 const items = [
-  { title: 'Tailored Capital', desc: 'Loans designed for your deal structure.' },
-  { title: 'Fast Approvals', desc: 'Move quickly on time-sensitive opportunities.' },
-  { title: 'Expert Consulting', desc: 'Architecture, engineering, and compliance guidance.' },
-  { title: 'Nationwide Network', desc: 'Access off-market properties and partners.' },
+  { 
+    title: 'Developers, owners & real-estate investors', 
+    desc: 'Move quickly on time-sensitive opportunities.',
+    icon: <FaBuilding className="text-[#bb9135] text-4xl mb-4" />
+  },
+  { 
+    title: 'Healthcare providers', 
+    desc: 'Loans designed for your deal structure.',
+    icon: <FaHospital className="text-[#bb9135] text-4xl mb-4" />
+  },
+  { 
+    title: 'Nonprofits & For-profits', 
+    desc: 'Access off-market properties and partners.',
+    icon: <FaHandsHelping className="text-[#bb9135] text-4xl mb-4" />
+  },
+  { 
+    title: 'General contractors & A/E firms', 
+    desc: 'Architecture, engineering, and compliance guidance.',
+    icon: <FaDraftingCompass className="text-[#bb9135] text-4xl mb-4" />
+  },
 ]
 
 function Features() {
@@ -17,9 +34,9 @@ function Features() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold">Why Choose FCI LLC</h2>
-        <p className="mt-3 text-white/80">Reliable funding, deep expertise, and a partnership mindset.</p>
+        <h2 className="text-3xl md:text-4xl font-bold">Who we serve</h2>
       </motion.div>
+      
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((f, i) => (
           <motion.div
@@ -28,10 +45,11 @@ function Features() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="rounded-xl bg-white/5 border border-white/10 p-6 h-full hover:border-white/20 transition shadow-sm hover:shadow-[0_8px_30px_rgba(195,206,211,0.1)]"
+            className="text-center rounded-2xl bg-black/5 border border-black/10 p-6 h-full hover:border-[#bb9135]/50 transition shadow-sm hover:shadow-[0_8px_30px_rgba(187,145,53,0.2)]"
           >
-            <h3 className="text-xl font-semibold">{f.title}</h3>
-            <p className="text-white/75 mt-2">{f.desc}</p>
+            <div className="flex justify-center">{f.icon}</div>
+            <h3 className="text-lg font-semibold mt-2">{f.title}</h3>
+            {/* <p className="text-white/70 mt-2 text-sm">{f.desc}</p> */}
           </motion.div>
         ))}
       </div>
@@ -40,5 +58,3 @@ function Features() {
 }
 
 export default Features
-
-
