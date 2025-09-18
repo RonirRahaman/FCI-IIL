@@ -9,7 +9,7 @@ const items = [
 
 function Features() {
   return (
-    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
       <motion.div 
         className="text-center"
         initial={{ opacity: 0, y: 30 }}

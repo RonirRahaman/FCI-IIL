@@ -1,11 +1,12 @@
-import banner from '../image/buil-4.jpg'
+import bannerVideo from '../image/About Us Banner Page.mp4'
 import Reveal from '../components/Reveal'
 import { FaBullseye, FaEye, FaHandshake, FaBolt, FaGlobeAmericas, FaPuzzlePiece } from 'react-icons/fa'
 import BannerFull from '../components/BannerFull'
 import CTA from '../components/CTA'
 // import p1 from '../image/People-1.jpg'
-import p2 from '../image/buil-2.jpg'
-import p3 from '../image/buil-3.jpg'
+import missionVideo from '../image/Our Mission.mp4'
+import visionVideo from '../image/Our Visions.mp4'
+import valuesVideo from '../image/Core Values.mp4'
 
 // const team = [
 //   { name: 'Alex Carter', role: 'Managing Partner', img: p1 },
@@ -24,12 +25,20 @@ const highlights = [
 function About() {
   return (
     <div className="pt-20">
-      <BannerFull title="About Us" subtitle="Smart, scalable, and sustainable solutions for real estate." image={banner} ctaLabel="Contact Us" ctaHref="/contact" />
+      <BannerFull title="About Us" subtitle="Smart, scalable, and sustainable solutions for real estate." video={bannerVideo} ctaLabel="Contact Us" ctaHref="/contact" />
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <Reveal>
-            <img src={p2} alt="Mission" className="w-full h-72 object-cover rounded-xl border border-white/10" />
+            <video 
+              className="w-full h-72 object-cover rounded-xl border border-white/10" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+            >
+              <source src={missionVideo} type="video/mp4" />
+            </video>
           </Reveal>
           <Reveal delay={120}>
             <div>
@@ -43,7 +52,15 @@ function About() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-center md:[&>*:first-child]:order-2">
           <Reveal>
-            <img src={p3} alt="Vision" className="w-full h-72 object-cover rounded-xl border border-white/10" />
+            <video 
+              className="w-full h-72 object-cover rounded-xl border border-white/10" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+            >
+              <source src={visionVideo} type="video/mp4" />
+            </video>
           </Reveal>
           <Reveal delay={120}>
             <div>
@@ -57,7 +74,15 @@ function About() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <Reveal>
-            <img src={p2} alt="Values" className="w-full h-72 object-cover rounded-xl border border-white/10" />
+            <video 
+              className="w-full h-72 object-cover rounded-xl border border-white/10" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+            >
+              <source src={valuesVideo} type="video/mp4" />
+            </video>
           </Reveal>
           <Reveal delay={120}>
             <div>

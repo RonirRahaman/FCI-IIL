@@ -1,5 +1,5 @@
 import heroVideo from '../image/hero-bg.mp4'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -14,10 +14,10 @@ function Hero() {
           Smart funding & consulting solutions to accelerate timelines and maximize returns.
         </p>
         <div className="mt-8 opacity-0 animate-[fadeInUp_700ms_ease_500ms_forwards]">
-          <Link to="/services" className="relative btn-primary bg-butn overflow-hidden">
+          {/* <Link to="/services" className="relative btn-primary bg-butn overflow-hidden">
             <span className="relative z-10">Explore Services</span>
             <span className="absolute inset-0 translate-x-[-120%] bg-white/30 skew-x-12" style={{ transition: 'transform 600ms' }} />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <style>{`

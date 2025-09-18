@@ -1,10 +1,10 @@
-import aboutImg from '../image/bild-1.jpg'
+import aboutVideo from '../image/Who We ARE.mp4'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 function AboutPreview() {
   return (
-    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center overflow-hidden">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -23,7 +23,15 @@ function AboutPreview() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <img src={aboutImg} alt="About FCI LLC" className="w-full h-80 object-cover rounded-lg shadow-lg" />
+        <video 
+          className="w-full h-80 object-cover rounded-lg shadow-lg" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src={aboutVideo} type="video/mp4" />
+        </video>
       </motion.div>
     </section>
   )

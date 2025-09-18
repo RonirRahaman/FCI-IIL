@@ -1,7 +1,7 @@
 import BannerFull from '../components/BannerFull'
 import Reveal from '../components/Reveal'
 import BookingForm from '../components/BookingForm'
-import hero from '../image/Service-2.jpg'
+import heroVideo from '../image/Financial & Capital Advisory Services.mp4'
 
 // Import video files
 import privateCapitalVideo from '../image/Financial & Capital Advisory Services/Private Capital.mp4'
@@ -87,7 +87,7 @@ function FinancialAdvisory() {
       <BannerFull 
         title="Financial & Capital Advisory Services" 
         subtitle="Strategic financial solutions and capital access for ambitious projects and investments." 
-        image={hero} 
+        video={heroVideo} 
         ctaLabel="Book a Consultation" 
         ctaHref="#booking" 
       />

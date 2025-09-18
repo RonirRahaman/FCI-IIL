@@ -1,7 +1,7 @@
 import BannerFull from '../components/BannerFull'
 import Reveal from '../components/Reveal'
 import BookingForm from '../components/BookingForm'
-import hero from '../image/Service-1.jpg'
+import heroVideo from '../image/Realestate development.mp4'
 
 // Import video files
 import landAcquisitionVideo from '../image/Real Estate & Development Services/Land Acquisition.mp4'
@@ -125,7 +125,7 @@ function RealEstateServices() {
       <BannerFull 
         title="Real Estate & Development Services" 
         subtitle="Comprehensive real estate solutions from land acquisition to project completion." 
-        image={hero} 
+        video={heroVideo} 
         ctaLabel="Book a Consultation" 
         ctaHref="#booking" 
       />

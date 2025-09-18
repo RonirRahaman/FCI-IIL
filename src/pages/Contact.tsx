@@ -1,12 +1,12 @@
-import office from '../image/Contact-1.jpg'
+import officeVideo from '../image/Contact Us second Image.mp4'
 import BookingForm from '../components/BookingForm'
 import BannerFull from '../components/BannerFull'
-import hero from '../image/Contact-2.jpg'
+import heroVideo from '../image/Contact Us Banner.mp4'
 
 function Contact() {
   return (
     <div className="pt-20">
-      <BannerFull title="Contact" subtitle="We’ll respond within 24 hours." image={hero} ctaLabel="Email Us" ctaHref="mailto:info@fci-llc.com" />
+      <BannerFull title="Contact" subtitle="We'll respond within 24 hours." video={heroVideo} ctaLabel="Email Us" ctaHref="mailto:info@fci-llc.com" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-10 items-start">
         <div>
           <h1 className="text-4xl font-extrabold">Contact Us</h1>
@@ -17,7 +17,15 @@ function Contact() {
         </div>
         <div>
           <div className="rounded-lg overflow-hidden border border-white/10">
-            <img src={office} alt="Office" className="w-full h-72 object-cover" />
+            <video 
+              className="w-full h-72 object-cover" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+            >
+              <source src={officeVideo} type="video/mp4" />
+            </video>
           </div>
           <div className="mt-6 rounded-lg overflow-hidden border border-white/10">
             <iframe

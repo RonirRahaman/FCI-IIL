@@ -37,7 +37,11 @@ function ServicesPreview() {
   useEffect(() => {
     if (isAutoPlaying) {
       intervalRef.current = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length)
+        setCurrentIndex((prevIndex) => {
+          const nextIndex = prevIndex + 1
+          // Reset to 0 when we reach the end of the original services array
+          return nextIndex >= services.length ? 0 : nextIndex
+        })
       }, 4000) // Change slide every 4 seconds
     }
 
@@ -49,11 +53,17 @@ function ServicesPreview() {
   }, [isAutoPlaying])
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length)
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = prevIndex + 1
+      return nextIndex >= services.length ? 0 : nextIndex
+    })
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length)
+    setCurrentIndex((prevIndex) => {
+      const prevIndexValue = prevIndex - 1
+      return prevIndexValue < 0 ? services.length - 1 : prevIndexValue
+    })
   }
 
   const goToSlide = (index: number) => {
@@ -93,12 +103,13 @@ function ServicesPreview() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 50}%)` }}
             >
-              {services.map((service, index) => (
-                <div key={index} className="w-1/2 flex-shrink-0 px-3">
+              {/* Duplicate services for infinite loop */}
+              {[...services, ...services].map((service, index) => (
+                <div key={`${service.title}-${index}`} className="w-1/2 flex-shrink-0 px-3">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: (index % services.length) * 0.1 }}
                     className="group rounded-lg overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 shadow-md hover:shadow-[0_8px_30px_rgba(195,206,211,0.15)]"
                   >
                     <div className="relative h-64 overflow-hidden">
@@ -174,12 +185,13 @@ function ServicesPreview() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {services.map((service, index) => (
-                <div key={index} className="w-full flex-shrink-0">
+              {/* Duplicate services for infinite loop */}
+              {[...services, ...services].map((service, index) => (
+                <div key={`${service.title}-${index}`} className="w-full flex-shrink-0">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: (index % services.length) * 0.1 }}
                     className="group rounded-lg overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 shadow-md"
                   >
                     <div className="relative h-48 overflow-hidden">

@@ -4,16 +4,30 @@ function BannerFull({
   ctaLabel,
   ctaHref = '#',
   image,
+  video,
 }: {
   title: string
   subtitle?: string
   ctaLabel?: string
   ctaHref?: string
-  image: string
+  image?: string
+  video?: string
 }) {
   return (
     <section className="relative h-[88vh] min-h-[540px] w-full overflow-hidden">
-      <img src={image} alt={title} className="absolute inset-0 h-full w-full object-cover" />
+      {video ? (
+        <video 
+          className="absolute inset-0 h-full w-full object-cover" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+      ) : (
+        <img src={image} alt={title} className="absolute inset-0 h-full w-full object-cover" />
+      )}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       <div className="relative z-10 h-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-center text-white">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight opacity-0 animate-[fadeInUp_700ms_ease_100ms_forwards]">{title}</h1>

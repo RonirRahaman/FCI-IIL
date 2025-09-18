@@ -1,6 +1,8 @@
 import Hero from '../components/Hero'
 import AboutPreview from '../components/AboutPreview'
 import ServicesPreview from '../components/ServicesPreview'
+import CommitmentSection from '../components/CommitmentSection'
+import TrustedSection from '../components/TrustedSection'
 // import TeamPreview from '../components/TeamPreview'
 import Features from '../components/Features'
 // import Testimonials from '../components/Testimonials'
@@ -22,6 +24,8 @@ function Home() {
       {/* <Stats /> */}
       <AboutPreview />
       <ServicesPreview />
+      <CommitmentSection />
+      <TrustedSection />
       {/* <Partners /> */}
       {/* <CaseStudies /> */}
       {/* <Testimonials /> */}

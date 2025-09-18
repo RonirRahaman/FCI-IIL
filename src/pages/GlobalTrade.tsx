@@ -1,7 +1,7 @@
 import BannerFull from '../components/BannerFull'
 import Reveal from '../components/Reveal'
 import BookingForm from '../components/BookingForm'
-import hero from '../image/Service-3.jpg'
+import heroVideo from '../image/Global Trade & Strategic Consulting.mp4'
 
 // Import video files
 import governmentContractingVideo from '../image/Global Trade & Strategic Consulting/Government Contracting Consulting.mp4'
@@ -81,7 +81,7 @@ function GlobalTrade() {
       <BannerFull 
         title="Global Trade & Strategic Consulting" 
         subtitle="International trade solutions and strategic consulting for global market expansion." 
-        image={hero} 
+        video={heroVideo} 
         ctaLabel="Book a Consultation" 
         ctaHref="#booking" 
       />

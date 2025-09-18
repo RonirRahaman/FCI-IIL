@@ -19,7 +19,7 @@ function Navbar() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img src={Logo} alt="FCI LLC" className="h-18 w-auto" />
-          <span className="font-semibold tracking-wide">FCI LLC</span>
+          {/* <span className="font-semibold tracking-wide">FCI LLC</span> */}
         </Link>
         <button className="md:hidden p-2 rounded hover:bg-white/10" onClick={() => setIsOpen((v) => !v)} aria-label="Toggle Menu">
           <span className="i-heroicons-bars-3 w-6 h-6">☰</span>
